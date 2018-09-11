@@ -1,0 +1,130 @@
+{
+  "_version": "1.8.0",
+  "sap.app": {
+    "id": "pae.logistica",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "dataSources": {
+      "default": {
+        "uri": "https://sandbox.api.sap.com/sapb1/b1s/v2/",
+        "type": "OData",
+        "settings": {
+          "odataversion" : "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "pae.logistica.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.30",
+      "libs": {
+        "sap.m": {}
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "pae.logistica.i18n.i18n"
+        }
+      },
+      "reservas": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "mock/Reservas.json"
+      },
+      "Orders": {
+				"dataSource": "default",
+				"settings": {
+					"autoExpandSelect": true,
+					"operationMode": "Server",
+					"groupId": "$direct",
+					"synchronizationMode": "None"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "pae.logistica.controller.CustomRouter",
+        "viewType": "XML",
+        "viewPath": "pae.logistica.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "App",
+          "name": "App",
+          "target": "App",
+          "subroutes":[
+            {
+              "pattern": "Home",
+              "name": "Home",
+              "target": "Home",
+              "subroutes": [
+                {
+                "pattern": "Avisos",
+                "name": "Avisos",
+                "view": "Avisos"
+              },
+              {
+                "pattern": "CualquierCosa",
+                "name": "CualquierCosa",
+                "view": "CualquierCosa"
+              }
+            ]
+            }
+          ]
+        }
+      ],
+      "targets": {
+        "Home": {
+          "viewId": "Home",
+          "viewName": "Home",
+          "viewLevel": 2
+        },
+        "App": {
+          "viewId": "App",
+          "viewName": "App",
+          "ViewLevel": 1
+        },
+        "Avisos": {
+          "viewId": "Avisos",
+          "ViewName": "Avisos",
+          "ViewLevel": 3
+        },
+        "CualquierCosa": {
+          "viewId": "CualquierCosa",
+          "ViewName": "CualquierCosa",
+          "ViewLevel": 3
+        }
+      }
+    }
+  }
+}

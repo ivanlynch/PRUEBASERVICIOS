@@ -1,0 +1,92 @@
+<mvc:View
+   controllerName="pae.logistica.controller.Aviso"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:f="sap.ui.layout.form"
+   xmlns:l="sap.ui.layout"
+   xmlns:core="sap.ui.core"
+   async="true"
+   id="home"
+   >
+    <Page>
+        <VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChange480_12120"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Notificar Evento"
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="12"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<core:Title text="¿Qué ha sucedido?" />
+				<Input placeholder="Descripción del evento" />
+				<core:Title text="¿Cuándo ha pasado?" />
+				<DatePicker	id="dPicker"
+							value="{path: '/fechaActual', type:'sap.ui.model.type.Date' }"
+							valueFormat="dd-MM-yyyy"
+							displayFormat="long"
+							placeholder="Dia - Mes - Año"
+							class="sapUiSmallMarginBottom"/>
+				<core:Title text="¿Donde ha pasado?" />
+				<Select>
+					<items>
+						<core:Item text="Alem 1110" key="1"/>
+						<core:Item text="Alem 1134" key="2"/>
+					</items>
+				</Select>
+				<core:Title text="¿Quíen notifica?" />
+				<RadioButtonGroup id="RBG" columns="2" class="sapUiMediumMarginBottom" select="onSelectRadioButtonGroup">
+					<buttons>
+						<RadioButton id="RB1-1" text="Confidencial"/>
+						<RadioButton id="RB1-2" text="Anónima"/>
+					</buttons>
+				</RadioButtonGroup>
+			</f:content>
+		</f:SimpleForm>
+		<f:SimpleForm id="formConfidencial"
+			editable="true"
+			visible="true"
+			layout="ResponsiveGridLayout"
+			title="Formulario de confidencialidad"
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="12"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="1"
+			singleContainerFullSize="false">
+			<f:content>
+				<core:Title text="Informacion de contacto" />
+				<Label text="Nombre y Apellido" />
+				<Input placeholder="Ingrese Nombre y Apellido" />
+				<Label text="Email" />
+				<Input placeholder="Ingrese email" />
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+	<footer>
+		<OverflowToolbar>
+			<Button icon="sap-icon://add-photo" press="onCamera"/>
+			<ToolbarSpacer />
+			<Button type="Accept" text="Guardar" press="onGuardar"/>
+			<Button type="Reject" text="Cancelar" press="onCancelar"/>
+		</OverflowToolbar>
+	</footer>
+    </Page>
+</mvc:View>

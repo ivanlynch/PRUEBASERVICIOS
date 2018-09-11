@@ -1,0 +1,38 @@
+<mvc:View
+	controllerName="pae.logistica.controller.Home"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<ObjectHeader
+		icon="sap-icon://shipping-status"
+		title="PAE Logistica"
+		>
+		<attributes>
+			<ObjectAttribute text="Gestion logistica" />
+		</attributes>
+	</ObjectHeader>
+	<IconTabBar
+		id="idIconTabBar"
+		select="handleIconTabBarSelect"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter
+				icon="sap-icon://documents"
+				iconColor="Positive"
+				count="{reservas>/ProductCollectionStats/Counts/Weight/Ok}"
+				text="Entegras"
+				key="SalesOrder" />
+			<IconTabFilter
+				icon="sap-icon://order-status"
+				iconColor="Positive"
+				count="{/ProductCollection/Counts/Weight/Heavy}"
+				text="Inventario"
+				key="Inventario" />
+			<IconTabFilter
+				icon="sap-icon://ui-notifications"
+				iconColor="Positive"
+				count="{/ProductCollectionStats/Counts/Weight/Overweight}"
+				text="Reservas"
+				key="Reservas" />
+		</items>
+	</IconTabBar>
+</mvc:View>

@@ -1,0 +1,23 @@
+{
+  "name": "monoculus-openui5",
+  "main": "",
+  "authors": [
+    "Iván Lynch <ivan.lynch@outlook.com.ar>"
+  ],
+  "description": "A little template to work with openui5",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "openui5-sap.m": "openui5/packaged-sap.m#1.56",
+    "openui5-sap.ui.core": "openui5/packaged-sap.ui.core#1.56",
+    "openui5-sap.ui.layout": "openui5/packaged-sap.ui.layout#1.56",
+    "openui5-sap.ui.unified": "openui5/packaged-sap.ui.unified#1.56",
+    "openui5-themelib_sap_belize": "openui5/packaged-themelib_sap_belize#1.56"
+  }
+}

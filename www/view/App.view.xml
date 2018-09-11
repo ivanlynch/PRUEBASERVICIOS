@@ -1,0 +1,23 @@
+<mvc:View
+   controllerName="pae.logistica.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+   displayBlock="true" >
+   <App class="myAppDemoWT" id="app">
+      <pages>
+         <Page title="{i18n>homePageTitle}">
+            <content>
+                  <VBox renderType="Bare" fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center" direction="Column">
+                        <items>
+                              <Input  width="50%" id="UserID" placeholder="User ID"></Input>
+                              <Input  width="50%" id="Password" placeholder="Password" type="Password"></Input>
+                              <Button width="50%" id="Login" text="Login" type="Emphasized" press="onLogin" enabled="true"></Button>
+                        </items>
+                  </VBox>
+            </content>
+         </Page>
+      </pages>
+   </App>
+</mvc:View>
+
+
