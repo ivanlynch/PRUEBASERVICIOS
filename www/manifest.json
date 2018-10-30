@@ -10,11 +10,11 @@
       "version": "1.0.0"
     },
     "dataSources": {
-      "default": {
-        "uri": "https://sandbox.api.sap.com/sapb1/b1s/v2/",
+      "invoiceRemote": {
+        "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
-          "odataversion" : "2.0"
+          "odataVersion": "2.0"
         }
       }
     }
@@ -51,21 +51,12 @@
         "type": "sap.ui.model.json.JSONModel",
         "uri": "mock/Reservas.json"
       },
-      "Orders": {
-				"dataSource": "default",
-				"settings": {
-					"headers" : {
-            "X-Requested-With" : "XMLHTTPREQUEST",
-            "Content-Type" : "application/json",
-            "Accept" : "application/json",
-            "APIKey" : "s9mEiQAd34aGhHLHC3XTq6y2UiYyhap7",
-            "sap-contextid-accept" : "header",
-            "Accept-Language" : "en"
-
-          },
-          "user" : "S0016198377",
-          "password" : "@Lynch12"
-        }
+      "invoice": {
+        "dataSource" : "invoiceRemote"
+      },
+      "invoice2": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "Invoices.json"
       }
     },
     "resources": {
@@ -89,23 +80,18 @@
           "pattern": "App",
           "name": "App",
           "target": "App",
-          "subroutes":[
+          "subroutes": [
             {
               "pattern": "Home",
               "name": "Home",
               "target": "Home",
               "subroutes": [
                 {
-                "pattern": "Avisos",
-                "name": "Avisos",
-                "view": "Avisos"
-              },
-              {
-                "pattern": "CualquierCosa",
-                "name": "CualquierCosa",
-                "view": "CualquierCosa"
-              }
-            ]
+                  "pattern": "EntregaEntrante/{OrderID}",
+                  "name": "EntregaEntrante",
+                  "view": "EntregaEntrante"
+                }
+              ]
             }
           ]
         }
@@ -122,13 +108,8 @@
           "ViewLevel": 1
         },
         "Avisos": {
-          "viewId": "Avisos",
-          "ViewName": "Avisos",
-          "ViewLevel": 3
-        },
-        "CualquierCosa": {
-          "viewId": "CualquierCosa",
-          "ViewName": "CualquierCosa",
+          "viewId": "EntregaEntrante",
+          "ViewName": "EntregaEntrante",
           "ViewLevel": 3
         }
       }

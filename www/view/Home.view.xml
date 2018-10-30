@@ -2,37 +2,44 @@
 	controllerName="pae.logistica.controller.Home"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
-	<ObjectHeader
-		icon="sap-icon://shipping-status"
-		title="PAE Logistica"
-		>
-		<attributes>
-			<ObjectAttribute text="Gestion logistica" />
-		</attributes>
-	</ObjectHeader>
-	<IconTabBar
-		id="idIconTabBar"
-		select="handleIconTabBarSelect"
-		class="sapUiResponsiveContentPadding">
-		<items>
-			<IconTabFilter
-				icon="sap-icon://documents"
-				iconColor="Positive"
-				count="{reservas>/ProductCollectionStats/Counts/Weight/Ok}"
-				text="Entegras"
-				key="SalesOrder" />
-			<IconTabFilter
-				icon="sap-icon://order-status"
-				iconColor="Positive"
-				count="{/ProductCollection/Counts/Weight/Heavy}"
-				text="Inventario"
-				key="Inventario" />
-			<IconTabFilter
-				icon="sap-icon://ui-notifications"
-				iconColor="Positive"
-				count="{/ProductCollectionStats/Counts/Weight/Overweight}"
-				text="Reservas"
-				key="Reservas" />
-		</items>
-	</IconTabBar>
+		<IconTabBar
+			id="idIconTabBar"
+			stretchContentHeight="true"
+			select="handleIconTabBarSelect"
+			class="sapUiResponsiveContentPadding">
+			<items>
+					<IconTabFilter
+						icon="sap-icon://documents"
+						iconColor="Positive"
+						text="Entregas"
+						key="All">
+						<ScrollContainer
+						height="100%"
+						width="100%"
+						horizontal="false"
+						vertical="true">
+							<List
+								class="sapUiResponsiveMargin"
+								width="auto"
+								items="{invoice2>/}" >
+									<items>
+										<ObjectListItem type="Active" press="onItemListPressed" icon="sap-icon://customer-order-entry" number="Posiciones: {invoice2>Quantity}" intro="Cliente: {invoice2>ShipperName}"/>
+									</items>
+							</List>
+						</ScrollContainer>
+					</IconTabFilter>
+					<IconTabFilter
+						icon="sap-icon://order-status"
+						iconColor="Positive"
+						count="{/ProductCollection/Counts/Weight/Heavy}"
+						text="Inventario"
+						key="Inventario" />
+					<IconTabFilter
+						icon="sap-icon://ui-notifications"
+						iconColor="Positive"
+						count="{/ProductCollectionStats/Counts/Weight/Overweight}"
+						text="Reservas"
+						key="Reservas" />
+			</items>
+		</IconTabBar>
 </mvc:View>

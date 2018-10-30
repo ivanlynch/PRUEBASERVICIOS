@@ -21,6 +21,41 @@ sap.ui.define([
 			} else {
 				this.getRouter().navTo("Home", {}, true);
 			}
+		},
+		prepareIDB: function(){
+
+			//Checkeamos que el navegador soporte IndexedDB
+			if(window.indexedDB == null){
+
+				console.error("IndexedDB is not supported in this browser");
+				return null;
+
+			}else{
+
+				//Revisa y crea el almacen de objetos
+				var request = window.indexedDB.open("OFFLINE_DB", 1);
+
+				request.onerror = function(event){
+					console.log("No funca");
+				}
+	
+				request.onsuccess = function(event){
+					window.db = request.result;
+				};
+			}
+
+			
+		},
+
+		writeToIDB: function(data){
+			//Crea la transaccion
+			var oTransaction = window.oController.myDB.transaction(["COMMENTS"], "readwrite");
+
+			//Obtiene el almacen de objetos requerido para esta transaccion
+			var oDataStore = oTransaction.objectStore("COMMENTS");
+
+			//Inserta la informacion
+			oDataStore.add("data", {keyPath: "id", autoIncrement: true});
 		}
 	});
 

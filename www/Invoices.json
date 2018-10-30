@@ -1,44 +1,302 @@
-{
-    "Invoices": [
+[
+  {
+    "EEID": "1",
+    "ProductName": "Pineapple",
+    "Quantity": 21,
+    "ExtendedPrice": 87.2000,
+    "ShipperName": "Fun Inc.",
+    "ShippedDate": "2015-04-01T00:00:00",
+    "Status": "A",
+    "CurrencyCode": "EUR",
+    "Positions" : [
       {
-        "ProductName": "Pineapple",
-        "Quantity": 21,
-        "ExtendedPrice": 87.2000,
-        "ShipperName": "Fun Inc.",
-        "ShippedDate": "2015-04-01T00:00:00",
-        "Status": "A"
+        "ID" : 1,
+        "Position" : "0010",
+        "Name": "Primera Posicion"
       },
       {
-        "ProductName": "Milk",
-        "Quantity": 4,
-        "ExtendedPrice": 9.99999,
-        "ShipperName": "ACME",
-        "ShippedDate": "2015-02-18T00:00:00",
-        "Status": "B"
+        "ID" : 2,
+        "Position" : "0020",
+        "Name": "Segunda Posicion"
       },
       {
-        "ProductName": "Canned Beans",
-        "Quantity": 3,
-        "ExtendedPrice": 6.85000,
-        "ShipperName": "ACME",
-        "ShippedDate": "2015-03-02T00:00:00",
-        "Status": "B"
+        "ID" : 3,
+        "Position" : "0030",
+        "Name": "Tercera Posicion"
+      }
+    ]
+  },
+  {
+    "EEID": "2",
+    "ProductName": "Milk",
+    "Quantity": 4,
+    "ExtendedPrice": 9.99999,
+    "ShipperName": "ACME",
+    "ShippedDate": "2015-02-18T00:00:00",
+    "Status": "B",
+    "CurrencyCode": "USD",
+    "Positions" : [
+      {
+        "ID" : 1,
+        "Position" : "0010",
+        "Name": "Primera Posicion"
       },
       {
-        "ProductName": "Salad",
-        "Quantity": 2,
-        "ExtendedPrice": 8.8000,
-        "ShipperName": "ACME",
-        "ShippedDate": "2015-04-12T00:00:00",
-        "Status": "C"
+        "ID" : 2,
+        "Position" : "0020",
+        "Name": "Segunda Posicion"
       },
       {
-        "ProductName": "Bread",
-        "Quantity": 1,
-        "ExtendedPrice": 2.71212,
-        "ShipperName": "Fun Inc.",
-        "ShippedDate": "2015-01-27T00:00:00",
-        "Status": "A"
+        "ID" : 3,
+        "Position" : "0030",
+        "Name": "Tercera Posicion"
+      }
+    ]
+  },
+  {
+    "EEID": "3",
+    "ProductName": "Canned Beans",
+    "Quantity": 3,
+    "ExtendedPrice": 6.85000,
+    "ShipperName": "ACME",
+    "ShippedDate": "2015-03-02T00:00:00",
+    "Status": "B",
+    "CurrencyCode": "USD",
+    "Positions" : [
+      {
+        "ID" : 1,
+        "Position" : "0010",
+        "Name": "Primera Posicion"
+      },
+      {
+        "ID" : 2,
+        "Position" : "0020",
+        "Name": "Segunda Posicion"
+      },
+      {
+        "ID" : 3,
+        "Position" : "0030",
+        "Name": "Tercera Posicion"
+      }
+    ]
+  },
+  {
+    "EEID": "4",
+    "ProductName": "Salad",
+    "Quantity": 2,
+    "ExtendedPrice": 8.8000,
+    "ShipperName": "ACME",
+    "ShippedDate": "2015-04-12T00:00:00",
+    "Status": "C",
+    "CurrencyCode": "USD",
+    "Positions" : [
+      {
+        "ID" : 1,
+        "Position" : "0010",
+        "Name": "Primera Posicion"
+      },
+      {
+        "ID" : 2,
+        "Position" : "0020",
+        "Name": "Segunda Posicion"
+      },
+      {
+        "ID" : 3,
+        "Position" : "0030",
+        "Name": "Tercera Posicion"
+      }
+    ]
+  },
+  {
+    "EEID": "5",
+    "ProductName": "Bread",
+    "Quantity": 1,
+    "ExtendedPrice": 2.71212,
+    "ShipperName": "Fun Inc.",
+    "ShippedDate": "2015-01-27T00:00:00",
+    "Status": "A",
+    "CurrencyCode": "USD",
+    "Positions" : [
+      {
+        "ID" : 1,
+        "Position" : "0010",
+        "Name": "Primera Posicion"
+      },
+      {
+        "ID" : 2,
+        "Position" : "0020",
+        "Name": "Segunda Posicion"
+      },
+      {
+        "ID" : 3,
+        "Position" : "0030",
+        "Name": "Tercera Posicion"
       }
     ]
   }
+  ,
+  {
+    "EEID": "6",
+    "ProductName": "Salad",
+    "Quantity": 2,
+    "ExtendedPrice": 8.8000,
+    "ShipperName": "ACME",
+    "ShippedDate": "2015-04-12T00:00:00",
+    "Status": "C",
+    "CurrencyCode": "USD",
+    "Positions" : [
+      {
+        "ID" : 1,
+        "Position" : "0010",
+        "Name": "Primera Posicion"
+      },
+      {
+        "ID" : 2,
+        "Position" : "0020",
+        "Name": "Segunda Posicion"
+      },
+      {
+        "ID" : 3,
+        "Position" : "0030",
+        "Name": "Tercera Posicion"
+      }
+    ]
+  },
+  {
+    "EEID": "7",
+    "ProductName": "Bread",
+    "Quantity": 1,
+    "ExtendedPrice": 2.71212,
+    "ShipperName": "Fun Inc.",
+    "ShippedDate": "2015-01-27T00:00:00",
+    "Status": "A",
+    "CurrencyCode": "USD",
+    "Positions" : [
+      {
+        "ID" : 1,
+        "Position" : "0010",
+        "Name": "Primera Posicion"
+      },
+      {
+        "ID" : 2,
+        "Position" : "0020",
+        "Name": "Segunda Posicion"
+      },
+      {
+        "ID" : 3,
+        "Position" : "0030",
+        "Name": "Tercera Posicion"
+      }
+    ]
+  }
+  ,
+  {
+    "EEID": "8",
+    "ProductName": "Salad",
+    "Quantity": 2,
+    "ExtendedPrice": 8.8000,
+    "ShipperName": "ACME",
+    "ShippedDate": "2015-04-12T00:00:00",
+    "Status": "C",
+    "CurrencyCode": "USD",
+    "Positions" : [
+      {
+        "ID" : 1,
+        "Position" : "0010",
+        "Name": "Primera Posicion"
+      },
+      {
+        "ID" : 2,
+        "Position" : "0020",
+        "Name": "Segunda Posicion"
+      },
+      {
+        "ID" : 3,
+        "Position" : "0030",
+        "Name": "Tercera Posicion"
+      }
+    ]
+  },
+  {
+    "EEID": "9",
+    "ProductName": "Bread",
+    "Quantity": 1,
+    "ExtendedPrice": 2.71212,
+    "ShipperName": "Fun Inc.",
+    "ShippedDate": "2015-01-27T00:00:00",
+    "Status": "A",
+    "CurrencyCode": "USD",
+    "Positions" : [
+      {
+        "ID" : 1,
+        "Position" : "0010",
+        "Name": "Primera Posicion"
+      },
+      {
+        "ID" : 2,
+        "Position" : "0020",
+        "Name": "Segunda Posicion"
+      },
+      {
+        "ID" : 3,
+        "Position" : "0030",
+        "Name": "Tercera Posicion"
+      }
+    ]
+  }
+  ,
+  {
+    "EEID": "10",
+    "ProductName": "Salad",
+    "Quantity": 2,
+    "ExtendedPrice": 8.8000,
+    "ShipperName": "ACME",
+    "ShippedDate": "2015-04-12T00:00:00",
+    "Status": "C",
+    "CurrencyCode": "1",
+    "Positions" : [
+      {
+        "ID" : 1,
+        "Position" : "0010",
+        "Name": "Primera Posicion"
+      },
+      {
+        "ID" : 2,
+        "Position" : "0020",
+        "Name": "Segunda Posicion"
+      },
+      {
+        "ID" : 3,
+        "Position" : "0030",
+        "Name": "Tercera Posicion"
+      }
+    ]
+  },
+  {
+    "EEID": "11",
+    "ProductName": "Bread",
+    "Quantity": 1,
+    "ExtendedPrice": 2.71212,
+    "ShipperName": "Fun Inc.",
+    "ShippedDate": "2015-01-27T00:00:00",
+    "Status": "A",
+    "CurrencyCode": "USD",
+    "Positions" : [
+      {
+        "ID" : 1,
+        "Position" : "0010",
+        "Name": "Primera Posicion"
+      },
+      {
+        "ID" : 2,
+        "Position" : "0020",
+        "Name": "Segunda Posicion"
+      },
+      {
+        "ID" : 3,
+        "Position" : "0030",
+        "Name": "Tercera Posicion"
+      }
+    ]
+  }
+]

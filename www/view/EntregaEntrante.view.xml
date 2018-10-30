@@ -1,0 +1,31 @@
+<mvc:View
+   controllerName="pae.logistica.controller.EntregaEntrante"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+   displayBlock="true" >
+    <Page 
+        showNavButton="true"
+        navButtonPress="onNavBack"
+        title="Proveedor: {invoice2>ShipperName}">
+        <ObjectHeader
+            title="{invoice2>ProductName}"
+            number="{
+                parts:[{path:'invoice2>ExtendedPrice'},{path:'invoice2>CurrencyCode'}],
+                type: 'sap.ui.model.type.Currency',
+                formatOptions: {showMeasure: false}
+		    }"
+		    numberUnit="{invoice2>CurrencyCode}">
+        
+        </ObjectHeader>
+        <List
+            class="sapUiResponsiveMargin"
+            width="auto"
+            items="{invoice2>Positions}" >
+                <items>
+                    <ObjectListItem type="Active" press="onItemListPressed" icon="sap-icon://customer-order-entry" number="Posicion: {invoice2>Position}" intro="Detalle: {invoice2>Name}"/>
+                </items>
+		</List>
+    </Page>
+</mvc:View>
+
+
