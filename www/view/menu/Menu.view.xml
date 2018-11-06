@@ -1,0 +1,25 @@
+<mvc:View
+	controllerName="pae.logistica.controller.menu.Menu"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<TileContainer id="container">
+        <StandardTile
+            icon="{icon}"
+            title="Recepción"
+            press="onPressRecepcion"
+        />
+        <StandardTile
+            icon="{icon}"
+            title="Salidas"
+            press="onPressSalidas"
+        />
+        <StandardTile
+            icon="{icon}"
+            title="Traspasos"
+        />
+        <StandardTile
+            icon="{icon}"
+            title="Inventario"
+        />
+	</TileContainer>	
+</mvc:View>

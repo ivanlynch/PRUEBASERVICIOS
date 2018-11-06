@@ -4,9 +4,8 @@ sap.ui.define([
 ], function (BaseController, MessageToast) {
 	"use strict";
 
-	return BaseController.extend("pae.logistica.controller.Home", {
+	return BaseController.extend("pae.logistica.controller.menu.recepcion.Home", {
 		onInit: function(){
-			BaseController.prototype.prepareIDB();
 		},
 		onItemListPressed: function(oEvent){
 			var oItem = oEvent.getSource();

@@ -5,12 +5,30 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("pae.logistica.controller.BaseController", {
+		onInit: function(){
+			
+		},
+		writeDB: function(){
 
+			var item = {
+				NroOrden: 1,
+				Titulo: "Probando",
+				Fecha: "2018"
+			};
+
+			var tx = window.PAE_SESSION.OFFLINE_DB.transaction(["Orders"], 'readwrite');
+
+			// Crea una almacén de objetos en la transacción
+			var almacen = tx.objectStore("Orders");
+			var agregar = almacen.add(item);
+
+		},
 		getRouter : function () {
 			return sap.ui.core.UIComponent.getRouterFor(this);
 		},
 
 		onNavBack: function (oEvent) {
+			console.log(window.probando);
 			var oHistory, sPreviousHash;
 
 			oHistory = History.getInstance();
@@ -21,41 +39,6 @@ sap.ui.define([
 			} else {
 				this.getRouter().navTo("Home", {}, true);
 			}
-		},
-		prepareIDB: function(){
-
-			//Checkeamos que el navegador soporte IndexedDB
-			if(window.indexedDB == null){
-
-				console.error("IndexedDB is not supported in this browser");
-				return null;
-
-			}else{
-
-				//Revisa y crea el almacen de objetos
-				var request = window.indexedDB.open("OFFLINE_DB", 1);
-
-				request.onerror = function(event){
-					console.log("No funca");
-				}
-	
-				request.onsuccess = function(event){
-					window.db = request.result;
-				};
-			}
-
-			
-		},
-
-		writeToIDB: function(data){
-			//Crea la transaccion
-			var oTransaction = window.oController.myDB.transaction(["COMMENTS"], "readwrite");
-
-			//Obtiene el almacen de objetos requerido para esta transaccion
-			var oDataStore = oTransaction.objectStore("COMMENTS");
-
-			//Inserta la informacion
-			oDataStore.add("data", {keyPath: "id", autoIncrement: true});
 		}
 	});
 

@@ -1,0 +1,12 @@
+<mvc:View
+	controllerName="pae.logistica.controller.menu.salidas.reserva.ingresar.Ingresar"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <Page
+        showNavButton="true"
+        navButtonPress="onNavBack"
+        title="Ingresar"
+        >
+        
+    </Page>
+</mvc:View>

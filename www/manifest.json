@@ -73,6 +73,9 @@
         "viewPath": "pae.logistica.view",
         "controlId": "app",
         "controlAggregation": "pages",
+        "bypassed": {
+					"target": "NotFound"
+				},
         "async": true
       },
       "routes": [
@@ -82,14 +85,60 @@
           "target": "App",
           "subroutes": [
             {
-              "pattern": "Home",
-              "name": "Home",
-              "target": "Home",
+              "pattern": "Menu",
+              "name" : "Menu",
+              "target" : "Menu",
               "subroutes": [
                 {
-                  "pattern": "EntregaEntrante/{OrderID}",
-                  "name": "EntregaEntrante",
-                  "view": "EntregaEntrante"
+                  "pattern": "Home",
+                  "name": "Home",
+                  "target": "Home",
+                  "subroutes": [
+                    {
+                      "pattern": "EntregaEntrante/{OrderID}",
+                      "name": "EntregaEntrante",
+                      "target": "EntregaEntrante"
+                    }
+                  ]
+                },
+                {
+                  "pattern": "Salidas",
+                  "name": "Salidas",
+                  "target": "Salidas",
+                  "subroutes":[
+                    {
+                      "pattern": "Reserva",
+                      "name": "Reserva",
+                      "target": "Reserva",
+                      "subroutes": [
+                        {
+                          "pattern": "Escanear",
+                          "name": "Escanear",
+                          "target": "Escanear"
+                        },
+                        {
+                          "pattern": "Ingresar",
+                          "name": "Ingresar",
+                          "target": "Ingresar"
+                        },
+                        {
+                          "pattern": "Listado",
+                          "name": "Listado",
+                          "target": "Listado"
+                        }
+                      ]
+                    },
+                    {
+                      "pattern": "Entrega",
+                      "name": "Entrega",
+                      "target": "Entrega"
+                    },
+                    {
+                      "pattern": "SinReferencia",
+                      "name": "SinReferencia",
+                      "target": "SinReferencia"
+                    }
+                  ]
                 }
               ]
             }
@@ -97,9 +146,53 @@
         }
       ],
       "targets": {
+        "Escanear": {
+          "viewId": "Escanear",
+          "viewName": "menu.salidas.reserva.escanear.Escanear",
+          "viewLevel": 5
+        },
+        "Ingresar": {
+          "viewId": "Ingresar",
+          "viewName": "menu.salidas.reserva.ingresar.Ingresar",
+          "viewLevel": 5
+        },
+        "Listado": {
+					"viewId": "Listado",
+          "viewName": "menu.salidas.reserva.listado.Listado",
+          "viewLevel": 5
+        },
+        "SinReferencia": {
+					"viewId": "SinReferencia",
+          "viewName": "menu.salidas.sinreferencia.SinReferencia",
+          "viewLevel": 4
+        },
+        "Entrega": {
+					"viewId": "Entrega",
+          "viewName": "menu.salidas.entrega.Entrega",
+          "viewLevel": 4
+				},
+        "NotFound": {
+					"viewId": "NotFound",
+          "viewName": "NotFound"
+				},
         "Home": {
           "viewId": "Home",
-          "viewName": "Home",
+          "viewName": "menu.recepcion.Home",
+          "viewLevel": 3
+        },
+        "Salidas": {
+          "viewId": "Salidas",
+          "viewName": "menu.salidas.Salidas",
+          "viewLevel": 3
+        },
+        "Reserva": {
+          "viewId": "Reserva",
+          "viewName": "menu.salidas.reserva.Reserva",
+          "viewLevel": 4
+        },
+        "Menu": {
+          "viewId": "Menu",
+          "viewName": "menu.Menu",
           "viewLevel": 2
         },
         "App": {
@@ -110,7 +203,7 @@
         "Avisos": {
           "viewId": "EntregaEntrante",
           "ViewName": "EntregaEntrante",
-          "ViewLevel": 3
+          "ViewLevel": 4
         }
       }
     }

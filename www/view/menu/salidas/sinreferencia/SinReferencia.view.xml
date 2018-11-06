@@ -1,0 +1,21 @@
+<mvc:View
+	controllerName="pae.logistica.controller.menu.salidas.sinreferencia.SinReferencia"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <Page
+        showNavButton="true"
+        navButtonPress="onNavBack"
+        title="Listado Reservass"
+        >
+        <TileContainer id="SinReferenciaTileContainer">
+            <StandardTile
+                icon="{icon}"
+                title="Reserva"
+            />
+            <StandardTile
+                icon="{icon}"
+                title="Reserva"
+            />
+        </TileContainer>
+    </Page>
+</mvc:View>

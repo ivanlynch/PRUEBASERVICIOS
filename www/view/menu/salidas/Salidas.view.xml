@@ -1,0 +1,29 @@
+<mvc:View
+	controllerName="pae.logistica.controller.menu.salidas.Salidas"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <Page
+        showNavButton="true"
+        navButtonPress="onNavBack"
+        title="Salidas de Material"
+        >
+        <TileContainer id="salidasTileContainer">
+            <StandardTile
+                icon="{icon}"
+                title="Reserva"
+                press="onPressReserva"
+            />
+            <StandardTile
+                icon="{icon}"
+                title="Entrega"
+                press="onPressEntrega"
+            />
+            <StandardTile
+                icon="{icon}"
+                title="Sin Referencia"
+                press="onPressSinReferencia"
+            />
+        </TileContainer>
+    </Page>
+
+</mvc:View>

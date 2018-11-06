@@ -1,0 +1,17 @@
+<mvc:View
+	controllerName="pae.logistica.controller.menu.salidas.entrega.Entrega"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <Page
+        showNavButton="true"
+        navButtonPress="onNavBack"
+        title="Entrega"
+        >
+        <TileContainer id="EntregaTileContainer">
+            <StandardTile
+                icon="{icon}"
+                title="Reserva"
+            />
+        </TileContainer>
+    </Page>
+</mvc:View>

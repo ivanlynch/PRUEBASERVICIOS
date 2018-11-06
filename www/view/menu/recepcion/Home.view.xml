@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="pae.logistica.controller.Home"
+	controllerName="pae.logistica.controller.menu.recepcion.Home"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
 		<IconTabBar

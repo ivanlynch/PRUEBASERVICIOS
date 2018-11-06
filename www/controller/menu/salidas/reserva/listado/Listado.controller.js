@@ -4,10 +4,8 @@ sap.ui.define([
 ], function (BaseController, MessageToast) {
 	"use strict";
 
-	return BaseController.extend("pae.logistica.controller.CualquierCosa", {
+	return BaseController.extend("pae.logistica.controller.menu.salidas.reserva.listado.Reserva", {
 		onInit: function(){
-            console.log("Estoy aca");
-		}
-	});
-
+        }
+	})
 });

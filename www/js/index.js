@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+window.PAE_SESSION = {};
 var app = {
 
     appInit: function () {
@@ -43,6 +44,27 @@ var app = {
     appReady: function () {
         $(".app").hide();
         this.appInit();
+        this.prepareIDB();
+    },
+
+    prepareIDB: function(){
+
+        if(window.indexedDB == null){
+            console.error("Tu browser no soporta IndexedDB");
+        }else{
+            console.log("Creando la base de Datos IndexedDB");
+            var request = window.indexedDB.open("PAE_OFFLINE_DB", 1);
+
+            request.onsuccess = function(e){
+                window.PAE_SESSION.OFFLINE_DB = e.target.result;
+            };
+
+            request.onupgradeneeded = function(e){
+                window.PAE_SESSION.OFFLINE_DB = e.target.result;
+                window.PAE_SESSION.OFFLINE_DB.createObjectStore("Orders", { keyPath: 'NroOrden'}); 
+            }
+            console.log("Conectado a IndexedDB");
+        }
     },
 
     // Application Constructor

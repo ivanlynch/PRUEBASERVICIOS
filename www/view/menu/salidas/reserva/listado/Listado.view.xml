@@ -1,0 +1,21 @@
+<mvc:View
+	controllerName="pae.logistica.controller.menu.salidas.reserva.listado.Listado"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <Page
+        showNavButton="true"
+        navButtonPress="onNavBack"
+        title="Listado Reservas"
+        >
+        <TileContainer id="listadoReservasTileContainer">
+            <StandardTile
+                icon="{icon}"
+                title="Reserva"
+            />
+            <StandardTile
+                icon="{icon}"
+                title="Reserva"
+            />
+        </TileContainer>
+    </Page>
+</mvc:View>
