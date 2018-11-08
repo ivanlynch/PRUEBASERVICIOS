@@ -1,0 +1,56 @@
+<mvc:View
+	controllerName="pae.logistica.controller.menu.salidas.reserva.ingresar.ReservaDetalle"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <Page
+        showNavButton="true"
+        navButtonPress="onNavBack" 
+        title="Reserva Numero {reservas>ReservaID}"
+        >
+        <ObjectHeader
+            id="objetoReserva"
+            icon="sap-icon://order-status"
+            title="Reserva {reservas>ReservaID}"
+            >
+            <attributes>
+                <ObjectAttribute
+                    title="Grafo"
+                    text="{reservas>Grafo}"/>
+                <ObjectAttribute
+                    title="Movimiento"
+                    text="{reservas>Movimiento}"/>
+		    </attributes>
+        </ObjectHeader>
+        <IconTabBar
+                id="reservaIconTabBar"
+                >
+                <items>
+                    <IconTabFilter text="Posiciones" count="{= ${reservas>Posiciones}.length}">
+                        <ScrollContainer
+						height="100%"
+						width="100%"
+						horizontal="false"
+						vertical="true">
+							<List
+								class="sapUiResponsiveMargin"
+								width="auto"
+								items="{reservas>Posiciones}" >
+									<items>
+										<ObjectListItem type="Active" 
+                                            icon="sap-icon://customer-order-entry"
+                                            title="{reservas>Material} - {reservas>Descripcion_Material}"
+                                            >
+                                            <attributes>
+                                                <ObjectAttribute text="Cantidad: {reservas>UMB} {path: 'reservas>Cantidad', type: 'sap.ui.model.type.Float'}"/>
+                                                <ObjectAttribute text="Centro: {reservas>Centro} Almacen: {reservas>Almacen} Lote: {reservas>Lote}"/>
+                                                <ObjectAttribute text="Fecha de Necesidad: {path:'reservas>Fecha_Necesidad', type: 'sap.ui.model.type.Date', formatOptions: { pattern: 'dd/MM/yyyy'}}"/>
+                                            </attributes>
+                                        </ObjectListItem>
+									</items>
+							</List>
+						</ScrollContainer>
+                    </IconTabFilter>
+                </items>
+        </IconTabBar>
+    </Page>
+</mvc:View>

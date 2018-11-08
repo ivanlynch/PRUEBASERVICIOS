@@ -27,7 +27,7 @@ sap.ui.define([
 			}
 		},
 		onPressButton: function(oEvent){
-			debugger;
+	
 		},
 		onNavBack: function () {
 			return BaseController.prototype.onNavBack();

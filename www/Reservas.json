@@ -1,0 +1,73 @@
+[   
+    {
+        "ReservaID": 3358,
+        "Grafo": 2000000283,
+        "Movimiento": 281,
+        "Posiciones": [
+            {
+                "Posicion": 10,
+                "Cantidad": "5.000",
+                "UMB": "UN",
+                "Material": 300105130300,
+                "Descripcion_Material": "CASING CC  H40, 9.5/8\", 32,30LBS/PIE, ST",
+                "Centro": "AR01",
+                "Almacen": "CD02",
+                "Lote": "NUEVO",
+                "Fecha_Necesidad": "@{currentdate}"
+            },
+            {
+                "Posicion": 20,
+                "Cantidad": "300.000",
+                "UMB": "UN",
+                "Material": 120901084444,
+                "Descripcion_Material": "MANGU.P/ROTARY DRILLING",
+                "Centro": "AR01",
+                "Almacen": "CD01",
+                "Lote": "USADO",
+                "Fecha_Necesidad": "@{currentdate}"
+            },
+            {
+                "Posicion": 30,
+                "Cantidad": "300.000",
+                "UMB": "UN",
+                "Material": 120901084444,
+                "Descripcion_Material": "MANGU.P/ROTARY DRILLING",
+                "Centro": "AR01",
+                "Almacen": "CD01",
+                "Lote": "USADO",
+                "Fecha_Necesidad": "@{currentdate}"
+            }
+        ]
+
+
+    },
+    {
+        "ReservaID": 3359,
+        "Grafo": 2000000285,
+        "Movimiento": 101,
+        "Posiciones": [
+            {
+                "Posicion": 10,
+                "Cantidad": "5.000",
+                "UMB": "UN",
+                "Material": 300105130300,
+                "Descripcion_Material": "CASING CC  H40, 9.5/8\", 32,30LBS/PIE, ST",
+                "Centro": "AR01",
+                "Almacen": "CD02",
+                "Lote": "NUEVO",
+                "Fecha_Necesidad": "@{currentdate}"
+            },
+            {
+                "Posicion": 20,
+                "Cantidad": "300.000",
+                "UMB": "UN",
+                "Material": 120901084444,
+                "Descripcion_Material": "MANGU.P/ROTARY DRILLING",
+                "Centro": "AR01",
+                "Almacen": "CD01",
+                "Lote": "USADO",
+                "Fecha_Necesidad": "@{currentdate}"
+            }
+        ]
+    }
+]
