@@ -43,7 +43,7 @@
                                             <attributes>
                                                 <ObjectAttribute text="Cantidad: {reservas>UMB} {path: 'reservas>Cantidad', type: 'sap.ui.model.type.Float'}"/>
                                                 <ObjectAttribute text="Centro: {reservas>Centro} Almacen: {reservas>Almacen} Lote: {reservas>Lote}"/>
-                                                <ObjectAttribute text="Fecha de Necesidad: {path:'reservas>Fecha_Necesidad', type: 'sap.ui.model.type.Date', formatOptions: { pattern: 'dd/MM/yyyy'}}"/>
+                                                <ObjectAttribute text="Fecha de Necesidad: {reservas>Fecha_Necesidad}"/>
                                             </attributes>
                                         </ObjectListItem>
 									</items>

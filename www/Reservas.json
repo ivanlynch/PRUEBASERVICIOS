@@ -13,7 +13,7 @@
                 "Centro": "AR01",
                 "Almacen": "CD02",
                 "Lote": "NUEVO",
-                "Fecha_Necesidad": "@{currentdate}"
+                "Fecha_Necesidad": "2014-01-01"
             },
             {
                 "Posicion": 20,
@@ -24,7 +24,7 @@
                 "Centro": "AR01",
                 "Almacen": "CD01",
                 "Lote": "USADO",
-                "Fecha_Necesidad": "@{currentdate}"
+                "Fecha_Necesidad": "2014-01-01"
             },
             {
                 "Posicion": 30,
@@ -35,7 +35,7 @@
                 "Centro": "AR01",
                 "Almacen": "CD01",
                 "Lote": "USADO",
-                "Fecha_Necesidad": "@{currentdate}"
+                "Fecha_Necesidad": "2014-01-01"
             }
         ]
 
@@ -55,7 +55,7 @@
                 "Centro": "AR01",
                 "Almacen": "CD02",
                 "Lote": "NUEVO",
-                "Fecha_Necesidad": "@{currentdate}"
+                "Fecha_Necesidad": "2014-01-01"
             },
             {
                 "Posicion": 20,
@@ -66,7 +66,7 @@
                 "Centro": "AR01",
                 "Almacen": "CD01",
                 "Lote": "USADO",
-                "Fecha_Necesidad": "@{currentdate}"
+                "Fecha_Necesidad": "2014-01-01"
             }
         ]
     }
