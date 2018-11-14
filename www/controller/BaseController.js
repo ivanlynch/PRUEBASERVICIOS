@@ -39,6 +39,49 @@ sap.ui.define([
 			} else {
 				this.getRouter().navTo("Home", {}, true);
 			}
+		},
+
+		onCamera: function(){
+			/*
+
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			var pictureSource, destinationType;
+
+			function onDeviceReady() {
+				pictureSource = navigator.camera.PictureSourceType;
+				destinationType = navigator.camera.DestinationType;
+			}
+
+			function TomarFoto() {
+				navigator.camera.getPicture(onSuccess, onFail, {
+					quality: 50,
+					destinationType: destinationType.FILE_URI,
+					saveToPhotoAlbum: true
+				});
+			}
+
+			function onSuccess(imageData) {
+				var smallImage = document.getElementById('smallImage');
+				smallImage.src = "data:image/jpeg;base64," + imageData;
+			}
+
+
+			function onFail() {
+				alert('Failed because: ' + message);
+			}
+
+			return TomarFoto();
+
+			*/
+
+		},
+
+		onGuardar: function(){
+			MessageToast.show("Su imágen ha sido almacenada en la memoria del teléfono", {
+				duration: 1500,
+				autoClose: false
+			});
 		}
 	});
 

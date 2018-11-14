@@ -9,6 +9,14 @@ sap.ui.define([
         },
         onNavBack: function () {
 			return BaseController.prototype.onNavBack();
+		},
+		onCamera: function(){
+			jQuery("__component0---Reserva--inputSalidasScanner-title").on(
+				"keypress",
+				function(event){
+					MessageToast.show(evenet.keyCode);
+				}
+			);
 		}
 	})
 });

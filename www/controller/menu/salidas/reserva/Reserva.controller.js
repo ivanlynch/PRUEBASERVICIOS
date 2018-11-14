@@ -13,7 +13,26 @@ sap.ui.define([
 			return BaseController.prototype.onNavBack();
 		},
 		onPressEscanear: function(){
-			this.getRouter().navTo("Escanear");
+			var that = this;
+			var reservas = this.getView().getModel("reservas").getData();
+			var dialog = new sap.m.Dialog({
+				title: 'Escanear Reserva',
+				type: 'Message',
+				content: [
+					new sap.m.Label({
+						text: 'Acerque su lector al codigo QR'
+					}),
+				],
+				
+				afterOpen: function(){
+					$(document).on('keydown', function(e){
+						e.preventDefault();
+						MessageToast.show(e.keyCode);
+					});
+				}
+			});
+
+			dialog.open();
 		},
 		onPressIngresar: function(){
 			var that = this;

@@ -9,6 +9,7 @@
         >
         <TileContainer id="reservaTileContainer">
             <StandardTile
+                id="inputSalidasScanner"
                 icon="{icon}"
                 title="Escanear"
                 press="onPressEscanear"
