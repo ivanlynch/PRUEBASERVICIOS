@@ -15,6 +15,12 @@ html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
     width: 90% !important;
 }
 
+div#__text1-cont0_1 {
+	width: 0 !important;
+	text-align: center;
+    min-width: 3% !important;
+}
+
 @media (orientation: portrait) {
 
 	.sapUiRFL {
