@@ -10,3 +10,15 @@ html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
     display: inline-block;
     font-weight: bold;
  }
+
+ .sapUiRFL {
+    width: 90% !important;
+}
+
+@media (orientation: portrait) {
+
+	.sapUiRFL {
+		width: 100% !important;
+	}
+
+}

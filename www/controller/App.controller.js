@@ -25,7 +25,7 @@ sap.ui.define([
 			});
 		},
 		onLogin: function(){
-			MessageToast.show("Logeando");
+			MessageToast.show("Logueando...");
 			this.getRouter().navTo("Menu");
 		}
 	});

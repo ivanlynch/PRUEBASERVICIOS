@@ -1,21 +1,39 @@
 <mvc:View
 	controllerName="pae.logistica.controller.menu.salidas.reserva.listado.Listado"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
+    xmlns:forms="sap.ui.layout.form"
+	xmlns="sap.m"
+    xmlns:core="sap.ui.core">
     <Page
         showNavButton="true"
         navButtonPress="onNavBack"
-        title="Listado Reservas"
-        >
-        <TileContainer id="listadoReservasTileContainer">
-            <StandardTile
-                icon="{icon}"
-                title="Reserva"
-            />
-            <StandardTile
-                icon="{icon}"
-                title="Reserva"
-            />
-        </TileContainer>
+        title="Listado Reservas">
+            <forms:SimpleForm
+                class="ResponsiveGridLayout">   
+                            <Label text="Material" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
+                            <Input placeholder="testing"/>
+                        
+                            <Label text="Centro" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
+                            <Input placeholder="testing"/>
+                         
+                        
+                            <Label text="Centro Coste" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
+                            <Input placeholder="testing"/>
+                         
+                        
+                            <Label text="Orden" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
+                            <Input placeholder="testing"/>
+                         
+                
+                            <Label text="Grafo" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
+                            <Input placeholder="Número"/><Text text="-" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
+                            <Input placeholder="Número"/>
+                    
+                         
+                            <Label text="Fecha Necesidad" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
+                            <Input placeholder="testing"/>
+                         
+                    
+        </forms:SimpleForm>
     </Page>
 </mvc:View>
