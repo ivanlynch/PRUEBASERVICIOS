@@ -20,7 +20,8 @@ sap.ui.define([
 				type: 'Message',
 				content: [
 					new sap.m.Label({
-						text: 'Acerque su lector al codigo QR'
+						text: 'Acerque su lector al codigo QR',
+						textAlign: sap.ui.core.TextAlign.Center
 					}),
 				],
 				
@@ -29,7 +30,14 @@ sap.ui.define([
 						e.preventDefault();
 						MessageToast.show(e.keyCode);
 					});
-				}
+				},
+
+				endButton: new sap.m.Button({
+					text: 'Cancelar',
+					press: function(){
+						dialog.destroy();
+					}
+				})
 			});
 
 			dialog.open();
