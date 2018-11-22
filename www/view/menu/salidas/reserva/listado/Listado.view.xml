@@ -8,31 +8,40 @@
         showNavButton="true"
         navButtonPress="onNavBack"
         title="Listado Reservas">
-            <forms:SimpleForm>   
-                            <Label text="Material" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
+            <Flexbox
+                direction="Column"
+                wrap="Wrap"
+                class="sapUiLargeMargin"
+                justifyContent="Center"
+                alignItems="Center">   
+                        <items>
+                            <Label text="Material" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>  
                             <Input placeholder="testing"/>
-                        
-                            <Label text="Centro" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
+                        </items>
+                        <items>
+                            <Label text="Centro" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>  
                             <Input placeholder="testing"/>
-                         
-                        
+                        </items> 
+                        <items>
                             <Label text="Centro Coste" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
                             <Input placeholder="testing"/>
-                         
-                        
+                         </items>
+                        <items>
                             <Label text="Orden" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
                             <Input placeholder="testing"/>
-                         
-                
+                         </items>
+                         <items>
                             <Label text="Grafo" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
                             <Input placeholder="Número" width="7rem"/><Text text="-" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
                             <Input placeholder="Número" width="3rem"/>
-                    
-                         
-                            <Label text="Fecha Necesidad" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
+                        </items>
+                        <items>
+                            <Label text="Fecha Necesidad" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/> 
                             <Input placeholder="testing"/>
-                         
-                    
-        </forms:SimpleForm>
+                        </items>
+                        <items>    
+                            <Button text="Ejecutar"/>
+                        </items>
+        </Flexbox>
     </Page>
 </mvc:View>
