@@ -2,6 +2,10 @@
 	controllerName="pae.logistica.controller.menu.recepcion.Home"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
+	<Page
+        showNavButton="true"
+        navButtonPress="onNavBack"
+        title="Recepción">
 		<IconTabBar
 			id="idIconTabBar"
 			stretchContentHeight="true"
@@ -42,4 +46,5 @@
 						key="Reservas" />
 			</items>
 		</IconTabBar>
+	</Page>	
 </mvc:View>

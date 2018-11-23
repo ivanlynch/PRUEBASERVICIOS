@@ -1,47 +1,121 @@
 <mvc:View
 	controllerName="pae.logistica.controller.menu.salidas.reserva.listado.Listado"
 	xmlns:mvc="sap.ui.core.mvc"
-    xmlns:forms="sap.ui.layout.form"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
 	xmlns="sap.m"
     xmlns:core="sap.ui.core">
     <Page
         showNavButton="true"
         navButtonPress="onNavBack"
         title="Listado Reservas">
-            <Flexbox
-                direction="Column"
-                wrap="Wrap"
-                class="sapUiLargeMargin"
-                justifyContent="Center"
-                alignItems="Center">   
-                        <items>
-                            <Label text="Material" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>  
-                            <Input placeholder="testing"/>
-                        </items>
-                        <items>
-                            <Label text="Centro" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>  
-                            <Input placeholder="testing"/>
-                        </items> 
-                        <items>
-                            <Label text="Centro Coste" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
-                            <Input placeholder="testing"/>
-                         </items>
-                        <items>
-                            <Label text="Orden" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
-                            <Input placeholder="testing"/>
-                         </items>
-                         <items>
-                            <Label text="Grafo" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
-                            <Input placeholder="Número" width="7rem"/><Text text="-" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
-                            <Input placeholder="Número" width="3rem"/>
-                        </items>
-                        <items>
-                            <Label text="Fecha Necesidad" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/> 
-                            <Input placeholder="testing"/>
-                        </items>
-                        <items>    
-                            <Button text="Ejecutar"/>
-                        </items>
-        </Flexbox>
+            <f:SimpleForm
+            editable="true"
+            layout="ResponsiveGridLayout"
+            labelSpanXL="4"
+            labelSpanL="2"
+            labelSpanM="2"
+            labelSpanS="2"
+            adjustLabelSpan="false"
+            emptySpanXL="0"
+            emptySpanL="0"
+            emptySpanM="0"
+            emptySpanS="0"
+            columnsXL="2"
+            columnsL="1"
+            columnsM="1"
+            columnsS="3"
+            singleContainerFullSize="false">
+            <f:content>
+                <Label text="Material">
+                    <layoutData>
+                        <l:GridData span="S3" />
+                    </layoutData>
+                </Label>    
+                <Input placeholder="Material...">
+                    <layoutData>
+                        <l:GridData span="S9" />
+                    </layoutData>
+                </Input>    
+                <Label text="Centro">
+                     <layoutData>
+                        <l:GridData span="S3" />
+                    </layoutData>
+                </Label>    
+                <Input placeholder="Centro...">
+                    <layoutData>
+                        <l:GridData span="S9" />
+                    </layoutData>
+                </Input>
+                <Label text="Centro coste">
+                    <layoutData>
+                        <l:GridData span="S3" />
+                    </layoutData>
+                 </Label>   
+                <Input placeholder="Centro coste...">
+                    <layoutData>
+                        <l:GridData span="S9" />
+                    </layoutData>
+                </Input>    
+                <Label text="Orden">
+                     <layoutData>
+                        <l:GridData span="S3" />
+                    </layoutData>
+                </Label>    
+                <Input placeholder="Orden...">
+                     <layoutData>
+                        <l:GridData span="S9" />
+                    </layoutData>
+                </Input>    
+                <Label text="Grafo">
+                    <layoutData>
+                        <l:GridData span="S3" />
+                    </layoutData>
+                </Label>    
+                <Input placeholder="Num1">
+                    <layoutData>
+                        <l:GridData span="S4" />
+                    </layoutData>
+                </Input>
+                <Text text="-"
+                    textAlign="Center">
+                    <layoutData>
+                        <l:GridData span="S1" />
+                    </layoutData>
+                 </Text>   
+                <Input placeholder="Num2">
+                    <layoutData>
+                        <l:GridData span="S4" />
+                    </layoutData>
+                 </Input>   
+                <Label text="Fecha de Necesidad">
+                    <layoutData>
+                        <l:GridData span="S3" />
+                    </layoutData>
+                </Label>    
+                <Input placeholder="Mes">
+                    <layoutData>
+                        <l:GridData span="S4" />
+                    </layoutData>
+                </Input>
+                <Text text="-"
+                    textAlign="Center">
+                    <layoutData>
+                        <l:GridData span="S1" />
+                    </layoutData>
+                </Text>
+                <Input placeholder="Año">
+                    <layoutData>
+                        <l:GridData span="S4" />
+                    </layoutData>
+                </Input>  
+                <Button text="Ejecutar"
+                    class="sapUiLargeMarginTop">
+                  <layoutData>
+                        <l:GridData span="S12" />
+                    </layoutData>
+                </Button>    
+            </f:content>
+        </f:SimpleForm>
     </Page>
 </mvc:View>
